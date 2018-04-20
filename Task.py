@@ -24,7 +24,6 @@ class Task:
         s= "\nTask Id: "+str(self.id)+" Priority: "+str(self.priority)+" Name: "+self.name+"\nDescription: "+ self.description
         return s
 
-
 #used for initializing Task from a dictionary. Use: foo = Task.fromDict({"id":bar,"name": baz, etc.})
     @classmethod
     def fromDict(cls, dictionary):

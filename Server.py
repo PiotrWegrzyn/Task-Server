@@ -43,9 +43,7 @@ def processMessage(message,list):
         c.sendall(taskListToString(list).encode())                                  #converting a list of task to string and than encoding the string and sending it to client
     if messageTable[0]=="ADD":
         newTask = Task(Task.id,messageTable[1], messageTable[2], messageTable[3])   #creating new task
-         #print("Added:\n"+newTask.printTask())
         list+=[newTask]                                                             #adding a new task to the list
-        #c.sendall(taskListToString(list).encode())
     if messageTable[0] =="SHOWP":
         c.send(priorityTaskListToString(list,messageTable[1]).encode())             #converting tasks with X priority from the list to string and than encoding the string and sending it to client
     if messageTable[0] == "REMOVE":

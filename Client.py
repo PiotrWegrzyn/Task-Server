@@ -12,7 +12,6 @@ def createConnection():
     host = socket.gethostname()  # Get local machine name
     port = 12345                 # Reserve a port for your service.
     newSocket.connect((host, port))
-
     return newSocket
 
 def menu():
